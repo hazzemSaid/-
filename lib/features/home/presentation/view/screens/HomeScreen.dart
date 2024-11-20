@@ -32,6 +32,37 @@ class HomeScreen extends StatelessWidget {
                 height: 20,
                 width: double.infinity,
               ),
+              const Align(
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'استمع الي القران',
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'Cairo',
+                    color: Color.fromARGB(255, 0, 0, 0),
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+                width: double.infinity,
+              ),
+              GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    childAspectRatio: 1.5,
+                  ),
+                  physics: const NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  itemCount: 20,
+                  itemBuilder: (context, index) {
+                    return const ListTile(
+                      title: Text('سورة البقره'),
+                      subtitle: Text('القارئ محمد اللحيدان'),
+                      trailing: Icon(Icons.play_arrow),
+                    );
+                  }),
             ],
           ),
         ),
