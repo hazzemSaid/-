@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quran_app/features/home/presentation/view/widget/CustomCardCharacterGrid.dart';
 import 'package:quran_app/features/home/presentation/view/widget/allappbar.dart';
 import 'package:quran_app/features/home/presentation/view/widget/homeitemrow.dart';
 import 'package:quran_app/features/home/presentation/view/widget/qurancard.dart';
@@ -48,21 +49,7 @@ class HomeScreen extends StatelessWidget {
                 height: 20,
                 width: double.infinity,
               ),
-              GridView.builder(
-                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 2,
-                    childAspectRatio: 1.5,
-                  ),
-                  physics: const NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  itemCount: 20,
-                  itemBuilder: (context, index) {
-                    return const ListTile(
-                      title: Text('سورة البقره'),
-                      subtitle: Text('القارئ محمد اللحيدان'),
-                      trailing: Icon(Icons.play_arrow),
-                    );
-                  }),
+              const CustomCardCharacterGrid(),
             ],
           ),
         ),
