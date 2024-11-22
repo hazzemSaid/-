@@ -13,7 +13,7 @@ class HomeListItemCard extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       itemBuilder: (context, index) {
         return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+          padding: const EdgeInsets.symmetric(horizontal: 10.0),
           child: customHomeCard(
             index: index,
           ),
