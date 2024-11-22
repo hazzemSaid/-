@@ -12,12 +12,10 @@ class HomeListItemCard extends StatelessWidget {
       itemCount: 4,
       scrollDirection: Axis.horizontal,
       itemBuilder: (context, index) {
-        return FittedBox(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20.0),
-            child: customHomeCard(
-              index: index,
-            ),
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
+          child: customHomeCard(
+            index: index,
           ),
         );
       },

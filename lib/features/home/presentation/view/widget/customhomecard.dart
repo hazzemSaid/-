@@ -11,8 +11,8 @@ class customHomeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.2,
-      width: MediaQuery.sizeOf(context).width * 0.2,
+      height: MediaQuery.of(context).size.height * 0.3,
+      width: MediaQuery.sizeOf(context).width * 0.3,
       child: Column(
         children: [
           Expanded(

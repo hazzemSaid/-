@@ -13,7 +13,7 @@ class HomeItemRow extends StatelessWidget {
         Expanded(
           child: SizedBox(
             height: MediaQuery.of(context).size.height *
-                0.2, // 20% of screen height
+                0.17, // 20% of screen height
             child: const HomeListItemCard(),
           ),
         ),
