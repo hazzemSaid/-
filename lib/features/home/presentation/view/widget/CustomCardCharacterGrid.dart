@@ -33,7 +33,7 @@ class CustomCardCharacterGrid extends StatelessWidget {
           child: const Column(
             children: [
               Expanded(
-                flex: 3,
+                flex: 4,
                 child: characterImageWidget(),
               ),
               Expanded(

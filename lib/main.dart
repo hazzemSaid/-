@@ -1,7 +1,7 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:quran_app/features/home/presentation/view/screens/HomeScreen.dart';
+import 'package:quran_app/core/routes.dart';
 
 void main() {
   runApp(DevicePreview(
@@ -23,7 +23,8 @@ class _QuranAppState extends State<QuranApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: Routes.router,
       locale: DevicePreview.locale(context), // دعم اللغات
       builder: DevicePreview.appBuilder,
 
@@ -35,7 +36,6 @@ class _QuranAppState extends State<QuranApp> {
         Locale('ar', ''), // Arabic
       ],
       title: 'QuranApp',
-      home: const HomeScreen(),
     );
   }
 }
