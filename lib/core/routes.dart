@@ -1,6 +1,8 @@
 import 'package:go_router/go_router.dart';
 import 'package:quran_app/features/home/presentation/view/screens/HomeScreen.dart';
 
+import '../features/listen_quran/presentation/view/screen/QuranPlayerCharacter.dart';
+
 class Routes {
   static const String home = '/';
   static const String login = '/login';
@@ -21,6 +23,10 @@ class Routes {
       GoRoute(
         path: '/',
         builder: (context, state) => const HomeScreen(),
+      ),
+      GoRoute(
+        path: '/search',
+        builder: (context, state) => const QuranPlayerCharacter(),
       ),
     ],
   );
