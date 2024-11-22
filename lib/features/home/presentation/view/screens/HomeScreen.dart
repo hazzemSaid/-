@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 
 import '../widget/homescreenbody.dart';
 
@@ -58,7 +59,8 @@ class _homeBottomNavigationState extends State<homeBottomNavigation> {
         ],
         onTap: (indx) {
           if (indx == 1) {
-            print('Search');
+            print('Quran');
+            GoRouter.of(context).go('/search');
           } else if (indx == 2) {
             print('Settings');
           } else {
