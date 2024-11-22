@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:quran_app/features/home/presentation/view/widget/characterImageWidget.dart';
 
 class CustomCardCharacterGrid extends StatelessWidget {
-  const CustomCardCharacterGrid({super.key});
-
+  const CustomCardCharacterGrid({super.key, this.scrollabel = false});
+  final bool scrollabel;
   @override
   Widget build(BuildContext context) {
     return GridView.builder(
@@ -11,8 +11,10 @@ class CustomCardCharacterGrid extends StatelessWidget {
         crossAxisCount: 2, // Two items per row
         childAspectRatio: 0.8, // Adjust ratio to make items taller
       ),
-      physics:
-          const NeverScrollableScrollPhysics(), // Prevent scroll if nested in a scrollable view
+      physics: scrollabel
+          ? const AlwaysScrollableScrollPhysics()
+          : const NeverScrollableScrollPhysics(),
+      // Prevent scroll if nested in a scrollable view
       shrinkWrap: true,
       itemCount: 20,
       itemBuilder: (context, index) {

@@ -12,7 +12,7 @@ class Test {
       "image": 'assets/images/open-hands.png',
     },
     {
-      "title": "الصلاة",
+      "title": "القبلة",
       "image": 'assets/images/praying.png',
     },
     {
