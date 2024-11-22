@@ -16,9 +16,9 @@ class Routes {
         builder: (context, state) => const QuranPlayerCharacter(),
       ),
       GoRoute(
-        path: '/settings',
+        path: '/setting',
         builder: (context, state) => const settingsScreen(),
-      ),
+      )
     ],
   );
 }

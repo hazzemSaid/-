@@ -1,13 +1,23 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../core/widgets/bottomnavbar.dart';
+
 class QuranPlayerCharacter extends StatelessWidget {
   const QuranPlayerCharacter({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
+      bottomNavigationBar: homeBottomNavigation(
+        selectedIndex: 1,
+      ),
+      appBar: AppBar(),
       body: Center(
-        child: Text('QuranPlayerScreen'),
+        child: IconButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            icon: Icon(Icons.arrow_back)),
       ),
     );
   }
