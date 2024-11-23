@@ -6,14 +6,17 @@ class Test {
   static String mosque =
       "https://upload.wikimedia.org/wikipedia/commons/5/5f/Ulucami%2CBursa_-_panoramio.jpg";
   static List itemHomepage = [
-    {"title": "القران الكريم", "image": 'assets/images/quran.png'},
     {
-      "title": "الاذكار",
-      "image": 'assets/images/open-hands.png',
+      "title": "تسميع",
+      "image": 'assets/images/alarm-clock 1.png',
     },
     {
-      "title": "القبلة",
-      "image": 'assets/images/praying.png',
+      "title": "تذكير",
+      "image": 'assets/images/koran 1.png',
+    },
+    {
+      "title": "المساعد الصوتي",
+      "image": 'assets/images/aiassest.png',
     },
     {
       "title": "الاذان",

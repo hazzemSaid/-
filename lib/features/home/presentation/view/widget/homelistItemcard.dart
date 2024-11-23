@@ -10,6 +10,8 @@ class HomeListItemCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: 4,
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
       scrollDirection: Axis.horizontal,
       itemBuilder: (context, index) {
         return Padding(

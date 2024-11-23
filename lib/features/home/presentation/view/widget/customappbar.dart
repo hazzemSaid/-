@@ -8,16 +8,20 @@ Row CustomAppBar() {
       const Padding(
         padding: EdgeInsets.symmetric(horizontal: 15.0),
         child: Text(
-          'اهلا ي احمد',
+          'اهلا احمد',
           style: TextStyle(
-            fontFamily: "Rubik",
-            fontSize: 25,
-            fontWeight: FontWeight.w900,
+            fontFamily: 'Poppins',
+            color: Colors.white,
+            fontSize: 20,
+            fontWeight: FontWeight.w800,
           ),
         ),
       ),
       CircleAvatar(
-        backgroundImage: NetworkImage(Test.ResourceUrl),
+        radius: 18,
+        backgroundImage: NetworkImage(
+          Test.ResourceUrl,
+        ),
       ),
     ],
   );

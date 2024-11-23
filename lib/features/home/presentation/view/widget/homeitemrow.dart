@@ -8,14 +8,10 @@ class HomeItemRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: [
         Expanded(
-          child: SizedBox(
-            height: MediaQuery.of(context).size.height *
-                0.15, // 20% of screen height
-            child: const HomeListItemCard(),
-          ),
+          child: HomeListItemCard(),
         ),
       ],
     );
