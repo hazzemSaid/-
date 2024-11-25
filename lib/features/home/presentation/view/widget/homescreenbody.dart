@@ -49,7 +49,7 @@ class homeScreenContent extends StatelessWidget {
             ),
           ),
           Container(
-            child: CustomCardCharacterGrid(),
+            child: const CustomCardCharacterGrid(),
           )
         ],
       ),

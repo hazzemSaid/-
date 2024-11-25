@@ -23,4 +23,22 @@ class Test {
       "image": 'assets/images/pray.png',
     },
   ];
+  static List<Map<String, String>> characters = [
+    {
+      'name': 'ياسر الدوسري',
+      'image': 'assets/images/Group 513393.png',
+    },
+    {
+      'name': 'ياسر الدوسري',
+      'image': "assets/images/Group 513392.png",
+    },
+    {
+      'name': 'ياسر الدوسري',
+      'image': "assets/images/Group 513394.png",
+    },
+    {
+      'name': 'عبد الباسط عبد الصمد',
+      'image': "assets/images/Rectangle 8.png",
+    }
+  ];
 }

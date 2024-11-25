@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../core/test.dart';
+
 class characterImageWidget extends StatelessWidget {
   const characterImageWidget({
     super.key,
@@ -8,11 +10,12 @@ class characterImageWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         borderRadius: BorderRadius.vertical(top: Radius.circular(10)),
         image: DecorationImage(
-          image: NetworkImage(
-              "https://ar.assabile.com/media/person/200x256/yasser-al-dossari.png"),
+          image: AssetImage(
+            Test.characters[3]['image']!,
+          ),
           fit: BoxFit.cover,
         ),
       ),

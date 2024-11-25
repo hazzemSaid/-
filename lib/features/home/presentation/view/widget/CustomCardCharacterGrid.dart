@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quran_app/core/test.dart';
 import 'package:quran_app/features/home/presentation/view/widget/characterImageWidget.dart';
 
 class CustomCardCharacterGrid extends StatelessWidget {
@@ -44,14 +45,16 @@ class CustomCardCharacterGrid extends StatelessWidget {
                   width: double.infinity,
                   color: Colors.white.withOpacity(.5),
                   padding: const EdgeInsets.all(8.0),
-                  child: const Text(
-                    "ياسر الدوسري",
-                    style: TextStyle(
-                      fontFamily: 'Tajawal',
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
+                  child: FittedBox(
+                    child: Text(
+                      Test.characters[3]['name']!,
+                      style: const TextStyle(
+                        fontFamily: 'Tajawal',
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
                   ),
                 ),
               ),
