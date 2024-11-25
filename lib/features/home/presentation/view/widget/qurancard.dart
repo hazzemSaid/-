@@ -14,8 +14,8 @@ class quradcard extends StatelessWidget {
       ),
       height: 200,
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: const [
+        gradient: const LinearGradient(
+          colors: [
             Color.fromARGB(102, 138, 191, 184),
             Color.fromARGB(102, 220, 238, 235),
             Color.fromARGB(102, 0, 160, 138),
@@ -38,13 +38,15 @@ class quradcard extends StatelessWidget {
             Icons.arrow_left_sharp,
             size: 30,
           ),
-          Text(
-            'اكمل القراءه',
-            style: TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              fontFamily: 'arial',
-              height: 1.5,
+          Flexible(
+            child: Text(
+              ' اخر قراءه رقم الاية 20 ',
+              style: TextStyle(
+                fontSize: 10,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'tajawal',
+                height: 1.5,
+              ),
             ),
           ),
           SizedBox(

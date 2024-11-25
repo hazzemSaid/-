@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quran_app/features/home/presentation/view/widget/quranlearnwidget.dart';
 
+import 'CustomCardCharacterGrid.dart';
 import 'appBarCompletely.dart';
 import 'qurancard.dart';
 import 'rowOfHomeItems.dart';
@@ -30,9 +31,26 @@ class homeScreenContent extends StatelessWidget {
             height: MediaQuery.sizeOf(context).height * 0.04,
           ),
           const quradcard(),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
+          const Align(
+            alignment: Alignment.centerRight,
+            child: Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: Text(
+                'استمع الي القرآن',
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.w800,
+                  fontFamily: 'Tajawal',
+                ),
+              ),
+            ),
+          ),
+          Container(
+            child: CustomCardCharacterGrid(),
+          )
         ],
       ),
     );

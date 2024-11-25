@@ -25,26 +25,29 @@ class CustomCardCharacterGrid extends StatelessWidget {
             color: Colors.white,
             boxShadow: [
               BoxShadow(
-                color: Colors.grey.withOpacity(0.5),
+                color: Colors.grey.withOpacity(0.7),
                 spreadRadius: 1,
                 blurRadius: 7,
-                offset: const Offset(0, 3), // Shadow position
+                offset: const Offset(0, 4), // Shadow position
               ),
             ],
           ),
-          child: const Column(
+          child: Column(
             children: [
-              Expanded(
+              const Expanded(
                 flex: 4,
                 child: characterImageWidget(),
               ),
               Expanded(
                 flex: 1,
-                child: Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Text(
+                child: Container(
+                  width: double.infinity,
+                  color: Colors.white.withOpacity(.5),
+                  padding: const EdgeInsets.all(8.0),
+                  child: const Text(
                     "ياسر الدوسري",
                     style: TextStyle(
+                      fontFamily: 'Tajawal',
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
