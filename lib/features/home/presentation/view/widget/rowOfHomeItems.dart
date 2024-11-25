@@ -13,7 +13,7 @@ class rowOfHomeItems extends StatelessWidget {
       top: MediaQuery.sizeOf(context).height * 0.24,
       child: SizedBox(
         width: MediaQuery.sizeOf(context).width,
-        height: MediaQuery.sizeOf(context).height * 0.12,
+        height: MediaQuery.sizeOf(context).height * 0.1,
         child: const HomeItemRow(),
       ),
     );

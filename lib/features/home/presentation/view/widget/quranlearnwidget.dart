@@ -39,20 +39,26 @@ class quranLearningWidget extends StatelessWidget {
                   child: Text(
                     '     تعلم القرآن\n بطريقه صحيحه وسليمه',
                     style: TextStyle(
-                      fontFamily: "poppins",
+                      fontFamily: "arial",
                       fontSize: MediaQuery.textScaleFactorOf(context) * 20,
-                      fontWeight: FontWeight.w900,
+                      fontWeight: FontWeight.w700,
                     ),
                     textAlign: TextAlign.center,
                   ),
                 ),
               ),
-              const CircleAvatar(
-                radius: 18,
-                backgroundColor: Color(0xff00A08A),
-                child: Icon(
-                  Icons.double_arrow_rounded,
-                  color: Colors.white,
+              SizedBox(
+                width: MediaQuery.sizeOf(context).width * 0.4,
+                child: const Align(
+                  alignment: Alignment.centerRight,
+                  child: CircleAvatar(
+                    radius: 19,
+                    backgroundColor: Color(0xff00A08A),
+                    child: Icon(
+                      Icons.double_arrow_rounded,
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
               ),
               const SizedBox(

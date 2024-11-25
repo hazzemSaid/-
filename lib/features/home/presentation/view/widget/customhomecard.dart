@@ -22,23 +22,20 @@ class customHomeCard extends StatelessWidget {
           child: Column(
             children: [
               Expanded(
-                flex: 3,
+                flex: 2,
                 child: Image(
-                  height: MediaQuery.of(context).size.height * 0.3,
                   image: AssetImage(Test.itemHomepage[index]['image']),
                 ),
               ),
               Expanded(
-                flex: 2,
+                flex: 4,
                 child: Flexible(
-                  child: FittedBox(
-                    child: Text('${Test.itemHomepage[index]['title']}',
-                        style: const TextStyle(
-                          fontFamily: "poppins",
-                          fontSize: 12,
-                          fontWeight: FontWeight.w900,
-                        )),
-                  ),
+                  child: Text('${Test.itemHomepage[index]['title']}',
+                      style: const TextStyle(
+                        fontFamily: 'arial',
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                      )),
                 ),
               ),
             ],
