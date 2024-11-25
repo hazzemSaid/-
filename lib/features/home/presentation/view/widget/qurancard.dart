@@ -15,16 +15,15 @@ class quradcard extends StatelessWidget {
       height: 200,
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [
-            Colors.grey.withOpacity(0.5),
-            Colors.grey.withOpacity(0.4),
-            Colors.grey.withOpacity(0.2),
-            Colors.grey.withOpacity(0.1),
+          colors: const [
+            Color.fromARGB(102, 138, 191, 184),
+            Color.fromARGB(102, 220, 238, 235),
+            Color.fromARGB(102, 0, 160, 138),
           ],
-          begin: Alignment.topLeft,
-          end: Alignment.topCenter,
+          end: Alignment.topRight,
+          begin: Alignment.bottomLeft,
         ),
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(30),
       ),
       child: const Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -33,7 +32,7 @@ class quradcard extends StatelessWidget {
             image: AssetImage(
               'assets/images/quran.png',
             ),
-            height: 75,
+            height: 100,
           ),
           Icon(
             Icons.arrow_left_sharp,
@@ -44,7 +43,7 @@ class quradcard extends StatelessWidget {
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
-              fontFamily: 'Cairo',
+              fontFamily: 'arial',
               height: 1.5,
             ),
           ),
