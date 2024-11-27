@@ -45,22 +45,22 @@ class QuranContentWidget extends StatelessWidget {
                     color: Color.fromARGB(255, 0, 160, 138),
                     borderRadius: BorderRadius.circular(20),
                   ),
-                  child: const Align(
+                  child: Container(
+                    width: 20,
+                    height: MediaQuery.sizeOf(context).height * 0.05,
                     alignment: Alignment.centerRight,
                     child: Row(
                       children: [
                         Expanded(
                           flex: 3,
-                          child: FittedBox(
-                            child: Text(
-                              'اكمل القراءه',
-                              style: TextStyle(
-                                fontSize: 30,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'tajawal',
-                                height: 1.5,
-                              ),
+                          child: Text(
+                            'اكمل القراءه',
+                            style: TextStyle(
+                              fontSize:
+                                  MediaQuery.textScaleFactorOf(context) * 20,
+                              color: Colors.white,
+                              fontWeight: FontWeight.w600,
+                              fontFamily: 'tajawal',
                             ),
                           ),
                         ),
