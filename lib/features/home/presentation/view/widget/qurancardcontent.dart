@@ -53,14 +53,16 @@ class QuranContentWidget extends StatelessWidget {
                       children: [
                         Expanded(
                           flex: 3,
-                          child: Text(
-                            'اكمل القراءه',
-                            style: TextStyle(
-                              fontSize:
-                                  MediaQuery.textScaleFactorOf(context) * 20,
-                              color: Colors.white,
-                              fontWeight: FontWeight.w600,
-                              fontFamily: 'tajawal',
+                          child: FittedBox(
+                            child: Text(
+                              'اكمل القراءه',
+                              style: TextStyle(
+                                fontSize:
+                                    MediaQuery.textScaleFactorOf(context) * 20,
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                                fontFamily: 'tajawal',
+                              ),
                             ),
                           ),
                         ),

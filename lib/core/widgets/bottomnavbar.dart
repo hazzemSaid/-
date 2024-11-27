@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:quran_app/features/home/presentation/view/screens/HomeScreen.dart';
-
-import '../../features/listen_quran/presentation/view/screen/QuranPlayerCharacter.dart';
-import '../../features/setting/presentation/view/screen/setting.dart';
 
 class homeBottomNavigation extends StatefulWidget {
   homeBottomNavigation({
     super.key,
     required this.selectedIndex,
   });
-  int selectedIndex = 0;
+  int selectedIndex;
 
   @override
   State<homeBottomNavigation> createState() => _homeBottomNavigationState();
@@ -20,10 +16,14 @@ class _homeBottomNavigationState extends State<homeBottomNavigation> {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
-        fixedColor: Color.fromARGB(255, 0, 0, 0),
+        fixedColor: const Color.fromARGB(255, 0, 160, 138),
         type: BottomNavigationBarType.fixed,
         currentIndex: widget.selectedIndex,
         landscapeLayout: BottomNavigationBarLandscapeLayout.linear,
+        iconSize: 26,
+        selectedFontSize: 12,
+        unselectedFontSize: 12,
+        unselectedItemColor: const Color.fromARGB(255, 133, 128, 128),
         items: const [
           BottomNavigationBarItem(
             icon: Icon(
@@ -32,34 +32,61 @@ class _homeBottomNavigationState extends State<homeBottomNavigation> {
             label: 'الرئيسية',
           ),
           BottomNavigationBarItem(
+              icon: Icon(
+                FontAwesomeIcons.quran,
+              ),
+              label: "القرآن الكريم"),
+          BottomNavigationBarItem(
             icon: Icon(
-              FontAwesomeIcons.readme,
+              FontAwesomeIcons.bookOpen,
             ),
-            label: 'قارئ القرآن',
+            label: "الحديث الشريف",
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              FontAwesomeIcons.cog,
+              FontAwesomeIcons.book,
             ),
-            label: 'الاعدادات',
+            label: "أحكام التجويد",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              FontAwesomeIcons.list,
+            ),
+            label: "القائمه",
           ),
         ],
         onTap: (indx) {
-          if (indx == 1) {
-            print('Quran');
-            Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => const QuranPlayerCharacter()));
-          } else if (indx == 2) {
-            Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => const settingsScreen()));
-            print('Settings');
-          } else {
-            Navigator.of(context).pushReplacement(
-                MaterialPageRoute(builder: (context) => const HomeScreen()));
+          if (indx == 0) {
             print('Home');
+          } else if (indx == 1) {
+            print('Quran');
+          } else if (indx == 2) {
+            print('Hadith');
+          } else if (indx == 3) {
+            print('Tajweed');
+          } else if (indx == 4) {
+            print('List');
           }
           widget.selectedIndex = indx;
           setState(() {});
         });
+  }
+}
+
+class SettingScreen extends StatelessWidget {
+  const SettingScreen({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Setting'),
+      ),
+      body: const Center(
+        child: Text('Setting Screen'),
+      ),
+    );
   }
 }
