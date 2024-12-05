@@ -5,8 +5,9 @@ class CustomTextField extends StatefulWidget {
     super.key,
     required this.text,
     this.isPassword = false,
+    required this.controll,
   });
-
+  final TextEditingController controll;
   final String text;
   final bool isPassword;
 
@@ -20,6 +21,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      controller: widget.controll,
       obscureText: widget.isPassword ? !isPasswordVisible : false,
       textAlign: TextAlign.right,
       decoration: InputDecoration(
