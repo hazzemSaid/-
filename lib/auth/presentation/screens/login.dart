@@ -13,7 +13,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color(0xFFFFFFFF),
+        backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         body: SingleChildScrollView(
           child: Form(
             key: formKey,
@@ -21,16 +21,20 @@ class LoginPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SizedBox(
-                  height: MediaQuery.sizeOf(context).height * 0.2,
+                  height: MediaQuery.sizeOf(context).height * 0.14,
                 ),
-                const Text("تسجيل الدخول",
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Tajawal',
+                Container(
+                    padding: const EdgeInsets.only(top: 65),
+                    height: MediaQuery.sizeOf(context).height * 0.2,
+                    width: MediaQuery.sizeOf(context).width * 0.5,
+                    decoration: const BoxDecoration(
+                      image: const DecorationImage(
+                        image: AssetImage('assets/images/logo.png'),
+                        fit: BoxFit.fitWidth,
+                      ),
                     )),
-                const SizedBox(
-                  height: 20,
+                SizedBox(
+                  height: MediaQuery.sizeOf(context).height * 0.06,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -54,6 +58,23 @@ class LoginPage extends StatelessWidget {
                       const SizedBox(
                         height: 20,
                       ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 8.0),
+                        child: Align(
+                          alignment: Alignment.centerRight,
+                          child: GestureDetector(
+                            child: const Text(
+                              'نسيت كلمه المرور؟',
+                              style: const TextStyle(
+                                fontSize: 15,
+                                fontFamily: 'Tajawal',
+                                color: Color.fromARGB(255, 4, 231, 198),
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ),
+                      )
                     ],
                   ),
                 ),
@@ -90,12 +111,46 @@ class LoginPage extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 19,
                         fontFamily: 'Tajawal',
-                        color: Colors.black,
+                        color: Color.fromARGB(255, 255, 255, 255),
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
                 ),
+                const SizedBox(
+                  height: 26,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const SizedBox(
+                      width: 5,
+                    ),
+                    const Text(
+                      'انشاء حساب',
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontFamily: 'Tajawal',
+                        color: Color.fromARGB(255, 4, 231, 198),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 5,
+                    ),
+                    GestureDetector(
+                      child: const Text(
+                        'ليس لديك حساب؟',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontFamily: 'Tajawal',
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ],
+                )
               ],
             ),
           ),

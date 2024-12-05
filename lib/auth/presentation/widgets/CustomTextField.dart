@@ -56,7 +56,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         ),
         enabledBorder: const OutlineInputBorder(
           borderSide: BorderSide(
-            color: Colors.black,
+            color: Colors.black45,
             width: 2.0,
           ),
           borderRadius: BorderRadius.all(
@@ -76,7 +76,6 @@ class _CustomTextFieldState extends State<CustomTextField> {
         hintStyle: const TextStyle(
           color: Colors.black,
         ),
-        filled: true,
       ),
     );
   }

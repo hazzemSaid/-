@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../widgets/CustomTextField.dart';
 
@@ -110,6 +111,106 @@ class UserRegistrationScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+                const SizedBox(
+                  height: 25,
+                ),
+                const Text("او",
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontFamily: 'Tajawal',
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                    )),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Text(
+                      "تسجيل الدخول بواسطه",
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontFamily: 'Tajawal',
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        color: Colors.blue,
+                      ),
+                      child: const Icon(
+                        Icons.facebook,
+                        color: Colors.white,
+                      ),
+                    ),
+                    Container(
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        color: Colors.blue,
+                      ),
+                      child: const Icon(
+                        FontAwesomeIcons.twitter,
+                        color: Colors.white,
+                      ),
+                    ),
+                    Container(
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        color: Colors.red,
+                      ),
+                      child: const Icon(
+                        FontAwesomeIcons.google,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Text(
+                        'تسجيل الدخول',
+                        style: const TextStyle(
+                          fontSize: 18,
+                          fontFamily: 'Tajawal',
+                          color: const Color.fromARGB(255, 4, 231, 198),
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                    const Text('لديك حساب بالفعل؟',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontFamily: 'Tajawal',
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                        )),
+                  ],
+                )
               ],
             ),
           ),
