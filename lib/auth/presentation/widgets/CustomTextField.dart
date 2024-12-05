@@ -6,10 +6,12 @@ class CustomTextField extends StatefulWidget {
     required this.text,
     this.isPassword = false,
     required this.controll,
+    required this.validation,
   });
   final TextEditingController controll;
   final String text;
   final bool isPassword;
+  final GlobalKey<FormState> validation;
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -20,7 +22,13 @@ class _CustomTextFieldState extends State<CustomTextField> {
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
+    return TextFormField(
+      validator: (value) {
+        if (value!.isEmpty) {
+          return 'الرجاء ادخال القيمه';
+        }
+        return null;
+      },
       controller: widget.controll,
       obscureText: widget.isPassword ? !isPasswordVisible : false,
       textAlign: TextAlign.right,
@@ -37,10 +45,19 @@ class _CustomTextFieldState extends State<CustomTextField> {
                 ),
               )
             : null,
-        enabledBorder: const OutlineInputBorder(
-          gapPadding: 10,
+        errorBorder: const OutlineInputBorder(
           borderSide: BorderSide(
-            color: Colors.black45,
+            color: Colors.white10,
+            width: 2.0,
+          ),
+          borderRadius: BorderRadius.all(
+            Radius.circular(30),
+          ),
+        ),
+        enabledBorder: const OutlineInputBorder(
+          borderSide: BorderSide(
+            color: Colors.black,
+            width: 2.0,
           ),
           borderRadius: BorderRadius.all(
             Radius.circular(30),
@@ -59,6 +76,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         hintStyle: const TextStyle(
           color: Colors.black,
         ),
+        filled: true,
       ),
     );
   }

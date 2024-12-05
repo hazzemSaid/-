@@ -14,12 +14,15 @@ class UserRegistrationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: const Color(0xFFFFFFFF),
-        body: SafeArea(
+        body: SingleChildScrollView(
           child: Form(
             key: formKey,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                SizedBox(
+                  height: MediaQuery.sizeOf(context).height * 0.2,
+                ),
                 const Text('انشاء حساب جديد',
                     style: TextStyle(
                       fontSize: 20,
@@ -35,6 +38,7 @@ class UserRegistrationScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       CustomTextField(
+                        validation: formKey,
                         controll: nameController,
                         text: 'الاسم',
                       ),
@@ -42,6 +46,7 @@ class UserRegistrationScreen extends StatelessWidget {
                         height: 20,
                       ),
                       CustomTextField(
+                        validation: formKey,
                         controll: emailController,
                         text: 'البريد الالكتروني',
                       ),
@@ -49,6 +54,7 @@ class UserRegistrationScreen extends StatelessWidget {
                         height: 20,
                       ),
                       CustomTextField(
+                        validation: formKey,
                         text: "الباسورد",
                         controll: passwordController,
                         isPassword: true,
@@ -57,6 +63,7 @@ class UserRegistrationScreen extends StatelessWidget {
                         height: 20,
                       ),
                       CustomTextField(
+                        validation: formKey,
                         controll: confirmPasswordController,
                         text: "تأكيد الباسورد",
                         isPassword: true,

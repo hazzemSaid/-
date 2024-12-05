@@ -44,17 +44,15 @@ class IntroductoryScreen extends StatelessWidget {
               ),
               customAuthContainer(
                 onTap: () {
-                  Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const LoginPage()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => LoginPage()));
                 },
                 text: 'تسجيل الدخول',
                 color: Colors.cyan,
               ),
               customAuthContainer(
                 onTap: () {
-                  Navigator.pushReplacement(
+                  Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) => UserRegistrationScreen()));
