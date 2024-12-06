@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../auth/presentation/screens/login.dart';
-import '../../../../auth/presentation/screens/register.dart';
+import '../../../presentation/screens/login.dart';
+import '../../../presentation/screens/register.dart';
 import '../widget/customAuthContainer.dart';
 
 class IntroductoryScreen extends StatelessWidget {
