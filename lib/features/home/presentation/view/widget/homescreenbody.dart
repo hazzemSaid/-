@@ -23,12 +23,12 @@ class homeScreenContent extends StatelessWidget {
               rowOfHomeItems(),
             ],
           ),
-          SizedBox(
-            height: MediaQuery.sizeOf(context).height * 0.1,
+          const SizedBox(
+            height: 60,
           ),
           const quranLearningWidget(),
-          SizedBox(
-            height: MediaQuery.sizeOf(context).height * 0.04,
+          const SizedBox(
+            height: 30,
           ),
           const quradcard(),
           const SizedBox(

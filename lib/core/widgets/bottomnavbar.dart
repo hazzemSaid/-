@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:quran_app/features/Alzkar/AlzkarScreen.dart';
+import 'package:quran_app/features/home/presentation/view/screens/HomeScreen.dart';
 
 class homeBottomNavigation extends StatefulWidget {
   homeBottomNavigation({
@@ -46,7 +48,7 @@ class _homeBottomNavigationState extends State<homeBottomNavigation> {
             icon: Icon(
               FontAwesomeIcons.book,
             ),
-            label: "أحكام التجويد",
+            label: "الاذكار",
           ),
           BottomNavigationBarItem(
             icon: Icon(
@@ -57,13 +59,20 @@ class _homeBottomNavigationState extends State<homeBottomNavigation> {
         ],
         onTap: (indx) {
           if (indx == 0) {
-            print('Home');
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) {
+              return const HomeScreen();
+            }));
           } else if (indx == 1) {
             print('Quran');
           } else if (indx == 2) {
             print('Hadith');
           } else if (indx == 3) {
-            print('Tajweed');
+            print('Azkar');
+            Navigator.pushReplacement(context,
+                MaterialPageRoute(builder: (context) {
+              return const AlzkarScreen();
+            }));
           } else if (indx == 4) {
             print('List');
           }
