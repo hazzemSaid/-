@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:quran_app/features/boarding/presentation/view/screens/boarding1.dart';
 import 'package:quran_app/features/home/presentation/view/screens/HomeScreen.dart';
 import 'package:quran_app/features/setting/presentation/view/screen/setting.dart';
 import 'package:quran_app/features/splash/presentation/screens/splash.dart';
@@ -6,6 +7,12 @@ import 'package:quran_app/features/splash/presentation/screens/splash.dart';
 import '../features/listen_quran/presentation/view/screen/QuranPlayerCharacter.dart';
 
 class Routes {
+  static const initial = '/';
+  static const home = '/home';
+  static const search = '/search';
+  static const setting = '/setting';
+  static const boarding1 = '/boarding1';
+
   static final GoRouter router = GoRouter(
     routes: [
       GoRoute(path: '/', builder: (context, state) => const SplashScreen()),
@@ -20,7 +27,10 @@ class Routes {
       GoRoute(
         path: '/setting',
         builder: (context, state) => const settingsScreen(),
-      )
+      ),
+      GoRoute(
+          path: '/boarding1',
+          builder: (context, state) => const WelcomeBoardingViewONE()),
     ],
   );
 }

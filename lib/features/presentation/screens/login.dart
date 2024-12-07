@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:quran_app/core/routes.dart';
 
 import '../widgets/CustomTextField.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
 
-  TextEditingController nameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
-  TextEditingController confirmPasswordController = TextEditingController();
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
@@ -83,10 +82,10 @@ class LoginPage extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    if (formKey.currentState!.validate() &&
-                        passwordController.text ==
-                            confirmPasswordController.text) {
+                    if (formKey.currentState!.validate()) {
+                      //using route name
                       print('Validated');
+                      Navigator.pushReplacementNamed(context, Routes.home);
                     }
                   },
                   child: Container(
