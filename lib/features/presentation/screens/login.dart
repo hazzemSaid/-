@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quran_app/core/routes/routes.dart';
+import 'package:quran_app/features/home/presentation/view/screens/HomeScreen.dart';
 
 import '../widgets/CustomTextField.dart';
 
@@ -85,7 +85,10 @@ class LoginPage extends StatelessWidget {
                     if (formKey.currentState!.validate()) {
                       //using route name
                       print('Validated');
-                      Navigator.pushReplacementNamed(context, Routes.home);
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HomeScreen()));
                     }
                   },
                   child: Container(
