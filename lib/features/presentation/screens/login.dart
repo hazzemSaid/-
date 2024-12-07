@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quran_app/core/routes.dart';
+import 'package:quran_app/core/routes/routes.dart';
 
 import '../widgets/CustomTextField.dart';
 

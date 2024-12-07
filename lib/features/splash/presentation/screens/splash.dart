@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'getstart.dart';
+import '../../../boarding/presentation/view/screens/boarding1.dart';
+import '../widget/LogoDisplay.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -19,31 +20,16 @@ class _SplashScreenState extends State<SplashScreen> {
   void _navigateToHome() async {
     await Future.delayed(
         const Duration(milliseconds: 2800)); // Delay for 2.8 seconds
-    Navigator.push(context,
-        MaterialPageRoute(builder: (context) => const IntroductoryScreen()));
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => const WelcomeBoardingViewONE()));
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        height: double.infinity,
-        width: double.infinity,
-        decoration: const BoxDecoration(
-            gradient: LinearGradient(
-          colors: [
-            Color.fromARGB(255, 255, 255, 255),
-            Color.fromARGB(255, 255, 255, 255),
-            Color.fromARGB(255, 255, 255, 255),
-            Color.fromARGB(255, 3, 174, 140),
-          ],
-          end: Alignment.topLeft,
-          begin: Alignment.bottomRight,
-        )),
-        child: const Center(
-          child: Image(image: AssetImage('assets/images/logo.png')),
-        ),
-      ),
+    return const Scaffold(
+      body: LogoDisplay(),
     );
   }
 }
